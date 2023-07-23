@@ -64,7 +64,7 @@ neutrond tx wasm instantiate 1220 '{
   "rich_line": "1000000",
   "asset_denom": "uatom",
   "frequency": 60,
-  "connection_id": "connection-53"
+  "connection_id": "connection-42"
 }' --from nnw-wallet --admin nnw-wallet --label rhm --gas 5000000 --gas-prices 0.025untrn | jq .
 ```
 
@@ -81,14 +81,14 @@ neutrond q wasm cs smart <addr> '{"config": {}}'
 
 [10]
 ```sh
-neutrond tx bank send nnw-wallet neutron1e028ur8xcy3zk2faukjpf8dxjhtfp0pxaj5umpfm899tadl5cvrqnqupwc 2000000untrn | jq .
+neutrond tx bank send nnw-wallet <addr> 2000000untrn | jq .
 ```
 
 and check the balance
 
 [11]
 ```sh
-neutrond q bank balances neutron1e028ur8xcy3zk2faukjpf8dxjhtfp0pxaj5umpfm899tadl5cvrqnqupwc | jq .
+neutrond q bank balances <addr> | jq .
 ```
 
 ## Register ICQs
